@@ -208,7 +208,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
         }
 
         private static readonly Regex _CodeSignature =
-            new Regex(@"BL2\((?<data>(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?)\)",
+            new Regex(@"AODK\((?<data>(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?)\)",
                       RegexOptions.CultureInvariant | RegexOptions.Multiline);
 
         public IEnumerable<IResult> PasteCode()
@@ -324,7 +324,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
 
                     var data = BackpackDataHelper.Encode(copy, Platform.PC);
                     var sb = new StringBuilder();
-                    sb.Append("BL2(");
+                    sb.Append("AODK(");
                     sb.Append(Convert.ToBase64String(data, Base64FormattingOptions.None));
                     sb.Append(")");
 

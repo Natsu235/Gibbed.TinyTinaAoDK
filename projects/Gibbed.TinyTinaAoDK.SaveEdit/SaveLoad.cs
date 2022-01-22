@@ -47,7 +47,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             if (string.IsNullOrEmpty(savePath) == false)
             {
                 savePath = Path.Combine(savePath, "My Games");
-                savePath = Path.Combine(savePath, "Borderlands 2", "WillowGame", "SaveData");
+                savePath = Path.Combine(savePath, "Tiny Tina's Assault On Dragon Keep", "WillowGame", "SaveData");
 
                 if (Directory.Exists(savePath) == true)
                 {
@@ -67,17 +67,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             var ofr = new MyOpenFileResult()
                 .FilterFiles(
                     ffc => ffc.AddFilter("sav", this._FilterIndex == 1)
-                              .WithDescription("PC Save Files")
-                              .AddFilter("sav", this._FilterIndex == 2)
-                              .WithDescription("Xbox 360 Save Files")
-                              .AddFilter("sav", this._FilterIndex == 3)
-                              .WithDescription("PlayStation 3 Save Files")
-                              .AddFilter("sav", this._FilterIndex == 4)
-                              .WithDescription("PlayStation Vita Save Files")
-                              .AddFilter("sav", this._FilterIndex == 5)
-                              .WithDescription("NVIDIA SHIELD Save Files")
-                              .AddFilter("sav", this._FilterIndex == 6)
-                              .WithDescription("Nintendo Switch Save Files"))
+                              .WithDescription("PC Save Files"))
                 .WithFileDo(s => fileName = s)
                 .WithFilterIndexDo(i => filterIndex = i);
 
@@ -100,15 +90,10 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             {
                 Platform.Invalid,
                 Platform.PC,
-                Platform.X360,
-                Platform.PS3,
-                Platform.PSVita,
-                Platform.Shield,
-                Platform.Switch,
             };
 
             fileNameAction(fileName);
-            platformAction(filterIndex < 1 || filterIndex > 6
+            platformAction(filterIndex < 1 || filterIndex > 1
                                ? Platform.PC
                                : platforms[filterIndex]);
         }

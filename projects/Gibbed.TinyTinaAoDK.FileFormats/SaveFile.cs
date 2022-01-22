@@ -88,11 +88,7 @@ namespace Gibbed.TinyTinaAoDK.FileFormats
 
         private static bool IsSupportedPlatform(Platform platform)
         {
-            return platform == Platform.PC ||
-                   platform == Platform.X360 ||
-                   platform == Platform.PS3 || platform == Platform.PSVita ||
-                   platform == Platform.Shield ||
-                   platform == Platform.Switch;
+            return platform == Platform.PC;
         }
 
         public void Serialize(Stream output)
@@ -130,7 +126,7 @@ namespace Gibbed.TinyTinaAoDK.FileFormats
                     innerCompressedData.WriteValueS32(0, Endian.Big);
                 }
 
-                innerCompressedData.WriteString("WSG");
+                innerCompressedData.WriteString("PSG"); // WillowSaveGame -> PawpawSaveGame
                 innerCompressedData.WriteValueU32(2, endian);
                 innerCompressedData.WriteValueU32(hash, endian);
                 innerCompressedData.WriteValueS32(innerUncompressedBytes.Length, endian);
@@ -208,7 +204,7 @@ namespace Gibbed.TinyTinaAoDK.FileFormats
                     : outerData.ReadValueU32(Endian.Big);
 
                 var magic = outerData.ReadString(3);
-                if (magic != "WSG")
+                if (magic != "PSG") // WillowSaveGame -> PawpawSaveGame
                 {
                     throw new SaveCorruptionException("invalid magic");
                 }

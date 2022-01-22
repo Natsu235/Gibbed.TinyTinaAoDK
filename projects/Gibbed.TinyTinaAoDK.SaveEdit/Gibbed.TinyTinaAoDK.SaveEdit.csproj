@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net40</TargetFramework>
-    <AssemblyTitle>Gibbed's Borderlands 2 Save Editor</AssemblyTitle>
+    <AssemblyTitle>Gibbed's Tiny Tina's Assault on Dragon Keep Save Editor</AssemblyTitle>
     <Company>Gibbed</Company>
     <Authors>Gibbed</Authors>
     <Description>http://gib.me/</Description>
@@ -10,7 +10,7 @@
     <Version>1.0.0</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <RepositoryUrl>https://github.com/gibbed/Gibbed.TinyTinaAoDK/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Natsu235/Gibbed.TinyTinaAoDK/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <StartupObject>Gibbed.TinyTinaAoDK.SaveEdit.Startup</StartupObject>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -47,7 +47,7 @@
     <ProjectReference Include="..\Gibbed.IO\Gibbed.IO.csproj" />
   </ItemGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\Handsome Jack.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Tiny Tina.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Resource Include="Resources\assaultrifle.png" />
@@ -85,6 +85,8 @@
     <Resource Include="Resources\seraph crystal.png" />
     <Resource Include="Resources\shield.png" />
     <Resource Include="Resources\stash.png" />
+    <Resource Include="Resources\Tiny Tina.ico" />
+    <Resource Include="Resources\Tiny Tina.jpg" />
     <Resource Include="Resources\torgue token.png" />
     <Resource Include="Resources\wheel.png" />
   </ItemGroup>

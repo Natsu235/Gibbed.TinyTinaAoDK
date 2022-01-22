@@ -31,10 +31,10 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
 {
     internal class AppWindowManager : WindowManager
     {
-        private const string _WindowTitle = "Gibbed's Borderlands 2 Save Editor";
+        private const string _WindowTitle = "Gibbed's Tiny Tina's Assault on Dragon Keep Save Editor";
         private const double _WindowWidth = 800.0 + 95.0;
         private const double _WindowHeight = 560.0;
-        private const string _WindowIconPath = "pack://application:,,,/Resources/Handsome Jack.png";
+        private const string _WindowIconPath = "pack://application:,,,/Resources/Tiny Tina.jpg";
 
         protected override Window EnsureWindow(object model, object view, bool isDialog)
         {

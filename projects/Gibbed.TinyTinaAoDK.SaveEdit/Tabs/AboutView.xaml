@@ -50,10 +50,14 @@
         <TextBlock Grid.Row="0"
                    TextWrapping="Wrap"
                    Margin="4">
-            <Run Text="Developed by " /><Hyperlink NavigateUri="http://gib.me/"
+            <Run Text="Originally developed by " /><Hyperlink NavigateUri="http://gib.me/"
                                                    Foreground="{StaticResource Gibbed}"
                                                    gbx:HyperlinkExtensions.IsExternal="true"><Run Text="gibbed"
-                                                                                                  Foreground="{StaticResource Gibbed}" /></Hyperlink><Run Text=" for use with Borderlands 2." />
+                                                                                                  Foreground="{StaticResource Gibbed}" /></Hyperlink><Run Text=" for use with Borderlands 2," />
+            <LineBreak />
+            <Run Text="Modfied by " /><Hyperlink NavigateUri="https://github.com/Natsu235"
+                                                 gbx:HyperlinkExtensions.IsExternal="true"><Run Text="PhantomNatsu" /></Hyperlink><Run Text=" to work with Tiny Tina's Assault on Dragon Keep." />
+            <LineBreak />
         </TextBlock>
         <TextBlock Grid.Row="1"
                    TextWrapping="Wrap"

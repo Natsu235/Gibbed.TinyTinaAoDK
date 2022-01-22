@@ -34,7 +34,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
         private int _Eridium;
         private int _SeraphCrystals;
         private int _ReservedA;
-        private int _TorgueTokens;
+        private int _ReservedB;
         private int _ReservedC;
         private int _ReservedD;
         private int _ReservedE;
@@ -98,15 +98,15 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             }
         }
 
-        public int TorgueTokens
+        public int ReservedB
         {
-            get { return this._TorgueTokens; }
+            get { return this._ReservedB; }
             set
             {
-                if (this._TorgueTokens != value)
+                if (this._ReservedB != value)
                 {
-                    this._TorgueTokens = value;
-                    this.NotifyOfPropertyChange(nameof(TorgueTokens));
+                    this._ReservedB = value;
+                    this.NotifyOfPropertyChange(nameof(ReservedB));
                 }
             }
         }
@@ -235,9 +235,9 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             this.ReservedA = saveGame.CurrencyOnHand != null && saveGame.CurrencyOnHand.Count > 3
                                  ? saveGame.CurrencyOnHand[3]
                                  : 0;
-            this.TorgueTokens = saveGame.CurrencyOnHand != null && saveGame.CurrencyOnHand.Count > 4
-                                    ? saveGame.CurrencyOnHand[4]
-                                    : 0;
+            this.ReservedB = saveGame.CurrencyOnHand != null && saveGame.CurrencyOnHand.Count > 4
+                                 ? saveGame.CurrencyOnHand[4]
+                                 : 0;
             this.ReservedC = saveGame.CurrencyOnHand != null && saveGame.CurrencyOnHand.Count > 5
                                  ? saveGame.CurrencyOnHand[5]
                                  : 0;
@@ -271,7 +271,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             saveGame.CurrencyOnHand.Add(this.Eridium);
             saveGame.CurrencyOnHand.Add(this.SeraphCrystals);
             saveGame.CurrencyOnHand.Add(this.ReservedA);
-            saveGame.CurrencyOnHand.Add(this.TorgueTokens);
+            saveGame.CurrencyOnHand.Add(this.ReservedB);
             saveGame.CurrencyOnHand.Add(this.ReservedC);
             saveGame.CurrencyOnHand.Add(this.ReservedD);
             saveGame.CurrencyOnHand.Add(this.ReservedE);
