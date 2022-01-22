@@ -23,11 +23,11 @@
 using System;
 using System.IO;
 using System.Linq;
-using Gibbed.Borderlands2.FileFormats;
+using Gibbed.TinyTinaAoDK.FileFormats;
 using Gibbed.IO;
 using ProtoBuf;
 using Huffman = Gibbed.Gearbox.Common.Huffman;
-using WillowTwoSave = Gibbed.Borderlands2.ProtoBufFormats.WillowTwoSave;
+using WillowTwoSave = Gibbed.TinyTinaAoDK.ProtoBufFormats.WillowTwoSave;
 
 namespace VerifySaves
 {

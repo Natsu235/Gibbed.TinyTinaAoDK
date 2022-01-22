@@ -1,23 +1,17 @@
-# Gibbed's Borderlands 2 Tools
+# Gibbed's Tiny Tina's Assault on Dragon Keep Tools
 
-Tools for modding Borderlands 2.
+Tools for modding Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure.
 
-**Like what I've done?**
-**Consider supporting me on [Patreon](https://patreon.com/gibbed), [Ko-fi](https://ko-fi.com/gibbed), [PayPal](https://paypal.me/gibbed), or by using the Epic Support-A-Creator Tag "GIBBED".**
-
-[![Build status](https://ci.appveyor.com/api/projects/status/003bq7d3qyhxit93/branch/master?svg=true)](https://ci.appveyor.com/project/gibbed/gibbed-borderlands2/branch/master)
+**Originally made by Gibbed for Borderlands 2**
+**Consider supporting him on [Patreon](https://patreon.com/gibbed), [Ko-fi](https://ko-fi.com/gibbed), [PayPal](https://paypal.me/gibbed), or by using the Epic Support-A-Creator Tag "GIBBED".**
 
 ## Save Editor
 
-To download, [go to the current release](https://github.com/gibbed/Gibbed.Borderlands2/releases/latest) and download `bl2_saveedit_1.0.x.zip`.
-
-### Community Resources
-
-TODO.
+To download, [go to the current release](https://github.com/Natsu235/Gibbed.TinyTinaAoDK/releases/latest) and download `aodk_saveedit_1.0.x.zip`.
 
 ## SparkTmsPack/SparkTmsUnpack
 
-These tools are used for unpacking Spark TMS data, which is downloaded by Borderlands 2 upon launching.
+These tools are used for unpacking Spark TMS data, which is downloaded by Tiny Tina's Assault on Dragon Keep upon launching.
 
 ## Building from source code
 

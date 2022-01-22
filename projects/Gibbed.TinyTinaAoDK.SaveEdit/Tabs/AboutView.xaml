@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="Gibbed.TinyTinaAoDK.SaveEdit.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:gbx="clr-namespace:Gibbed.Gearbox.WPF;assembly=Gibbed.Gearbox.WPF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="500">
+    <d:DesignerProperties.DesignStyle>
+        <Style TargetType="UserControl">
+            <Setter Property="Background"
+                    Value="White" />
+        </Style>
+    </d:DesignerProperties.DesignStyle>
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="Gibbed"
+                             EndPoint="1,0.5"
+                             StartPoint="0,0.5">
+            <GradientStop Color="Lime"
+                          Offset="0" />
+            <GradientStop Color="Magenta"
+                          Offset="1" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="Rainbow"
+                             EndPoint="1,0.5"
+                             StartPoint="0,0.5">
+            <GradientStop Color="Red"
+                          Offset="0" />
+            <GradientStop Color="Orange"
+                          Offset="0.17" />
+            <GradientStop Color="Yellow"
+                          Offset="0.33" />
+            <GradientStop Color="Green"
+                          Offset="0.5" />
+            <GradientStop Color="Blue"
+                          Offset="0.67" />
+            <GradientStop Color="Indigo"
+                          Offset="0.84" />
+            <GradientStop Color="Violet"
+                          Offset="1" />
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   TextWrapping="Wrap"
+                   Margin="4">
+            <Run Text="Developed by " /><Hyperlink NavigateUri="http://gib.me/"
+                                                   Foreground="{StaticResource Gibbed}"
+                                                   gbx:HyperlinkExtensions.IsExternal="true"><Run Text="gibbed"
+                                                                                                  Foreground="{StaticResource Gibbed}" /></Hyperlink><Run Text=" for use with Borderlands 2." />
+        </TextBlock>
+        <TextBlock Grid.Row="1"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   FontSize="15"
+                   FontWeight="Bold"
+                   Margin="4">
+            <Run Text="Like what " /><Run Text="gibbed"
+                                          Foreground="{StaticResource Gibbed}" /><Run Text=" has done?" />
+            <LineBreak />
+            <Run Text="Consider supporting the developer on " /><Hyperlink NavigateUri="https://patreon.com/gibbed"
+                                                                           gbx:HyperlinkExtensions.IsExternal="true">Patreon</Hyperlink><Run Text=", " /><Hyperlink NavigateUri="https://ko-fi.com/gibbed"
+                                                                                                                                                                    gbx:HyperlinkExtensions.IsExternal="true">Ko-fi</Hyperlink><Run Text=", " /><Hyperlink NavigateUri="https://paypal.me/gibbed"
+                                                                                                                                                                                                                                                           gbx:HyperlinkExtensions.IsExternal="true">PayPal</Hyperlink><Run Text="," />
+            <LineBreak />
+            <Run Text="or by using the Epic Support-A-Creator Tag &quot;" /><Run Foreground="{StaticResource Gibbed}"
+                                                                                 Text="GIBBED" /><Run Text="&quot;." />
+        </TextBlock>
+        <TextBlock Grid.Row="2"
+                   TextWrapping="Wrap"
+                   Margin="4">
+            <Run Text="With special thanks to..." />
+            <LineBreak />
+            <LineBreak />
+            <Run Text="The following people who went out of their way to support the developer:" />
+            <LineBreak />
+            <Run Text="— Erratum Mendelrock, Derch, imchillyb, MadWarrior, Man of Low Moral Fiber, SandyS1, spiff, Xhulifactor, and others who choose to remain anonymous." />
+            <LineBreak />
+            <LineBreak />
+            <Run Text="The following people who in some way contributed to the development of this save editor:" />
+            <LineBreak />
+            <Run Text="— cake, Crimor, dis_astranagant, DOMIN8, duncanfogg, evil0z, FasuXe, Foran, hi-ban, Jordan, Jusupov, Kryptos, Kyle873, Namidairo, NeuroticTurtle, pclifford, Septarius, Shyke, TechnoJacker, and zylche." />
+            <LineBreak />
+            <LineBreak />
+            <Run Text="And of course Gearbox Software, for creating Borderlands to begin with!" />
+            <LineBreak />
+            <LineBreak />
+            <Run Text="For anyone else I missed, you know who you are!" />
+        </TextBlock>
+    </Grid>
+</UserControl>
