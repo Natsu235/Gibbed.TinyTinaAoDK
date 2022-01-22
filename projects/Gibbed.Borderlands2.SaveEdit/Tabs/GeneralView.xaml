@@ -1,0 +1,133 @@
+﻿<!--
+/* Copyright (c) 2019 Rick (rick 'at' gibbed 'dot' us)
+ *
+ * This software is provided 'as-is', without any express or implied
+ * warranty. In no event will the authors be held liable for any damages
+ * arising from the use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ *    claim that you wrote the original software. If you use this software
+ *    in a product, an acknowledgment in the product documentation would
+ *    be appreciated but is not required.
+ *
+ * 2. Altered source versions must be plainly marked as such, and must not
+ *    be misrepresented as being the original software.
+ *
+ * 3. This notice may not be removed or altered from any source
+ *    distribution.
+ */
+-->
+<UserControl x:Class="Gibbed.Borderlands2.SaveEdit.GeneralView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:c="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:gbx="clr-namespace:Gibbed.Gearbox.WPF;assembly=Gibbed.Gearbox.WPF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d"
+             d:DesignWidth="720"
+             d:DesignHeight="480">
+    <d:DesignerProperties.DesignStyle>
+        <Style TargetType="UserControl">
+            <Setter Property="Background"
+                    Value="White" />
+        </Style>
+    </d:DesignerProperties.DesignStyle>
+    <StackPanel Orientation="Vertical">
+        <Expander Header="Save"
+                  IsExpanded="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.50*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Content="Save Guid:" />
+                <DockPanel LastChildFill="True"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="3">
+                    <Button x:Name="RandomizeSaveGuid"
+                            DockPanel.Dock="Right"
+                            ToolTip="Randomzie the save guid">
+                        Random
+                    </Button>
+                    <TextBox Text="{Binding Path=SaveGuid, UpdateSourceTrigger=PropertyChanged}" />
+                </DockPanel>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Content="Save Slot:" />
+                <xctk:IntegerUpDown Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="3"
+                                    Value="{Binding Path=SaveGameId, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       HorizontalContentAlignment="Right"
+                       Content="Platform:" />
+                <gbx:MyComboBox Grid.Row="2"
+                                Grid.Column="1"
+                                ItemsSource="{Binding Path=Platforms}"
+                                DisplayMemberPath="Name"
+                                SelectedValuePath="Value"
+                                SelectedValue="{Binding Path=Platform}"
+                                Margin="3" />
+            </Grid>
+        </Expander>
+        <Expander Header="Importing"
+                  IsExpanded="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.50*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <WrapPanel Orientation="Horizontal"
+                           Grid.Row="0"
+                           Grid.Column="1">
+                    <Button Margin="3"
+                            Content="Import Skills">
+                        <c:Message.Attach>[Event Click] = [Action DoImportSkills]</c:Message.Attach>
+                    </Button>
+                    <Button Margin="3"
+                            Content="Import Missions">
+                        <c:Message.Attach>[Event Click] = [Action DoImportMissions]</c:Message.Attach>
+                    </Button>
+                    <Button Margin="3"
+                            Content="Import World">
+                        <c:Message.Attach>[Event Click] = [Action DoImportWorld]</c:Message.Attach>
+                    </Button>
+                    <Button Margin="3"
+                            Content="Import Stats">
+                        <c:Message.Attach>[Event Click] = [Action DoImportStats]</c:Message.Attach>
+                    </Button>
+                </WrapPanel>
+            </Grid>
+        </Expander>
+    </StackPanel>
+</UserControl>

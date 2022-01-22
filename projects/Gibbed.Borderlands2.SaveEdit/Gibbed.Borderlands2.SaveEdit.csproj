@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net40</TargetFramework>
+    <AssemblyTitle>Gibbed's Borderlands 2 Save Editor</AssemblyTitle>
+    <Company>Gibbed</Company>
+    <Authors>Gibbed</Authors>
+    <Description>http://gib.me/</Description>
+    <Copyright>Copyright © Gibbed 2019</Copyright>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/gibbed/Gibbed.Borderlands2/</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <StartupObject>Gibbed.Borderlands2.SaveEdit.Startup</StartupObject>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Configurations>Debug;Release;SaveEdit Packaging</Configurations>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseWpf>true</UseWpf>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SaveEdit Packaging|AnyCPU'">
+    <OutputPath>..\..\upload\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="1.5.1" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="2.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro.Contrib, Version=1.0.1.0, Culture=neutral, PublicKeyToken=23b8ce3a92a0a872, processorArchitecture=MSIL">
+      <HintPath>..\..\other\wpf\Caliburn.Micro.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gearbox\Gibbed.Gearbox.WPF\Gibbed.Gearbox.WPF.csproj" />
+    <ProjectReference Include="..\Gibbed.Borderlands2.FileFormats\Gibbed.Borderlands2.FileFormats.csproj" />
+    <ProjectReference Include="..\Gibbed.Borderlands2.GameInfo\Gibbed.Borderlands2.GameInfo.csproj" />
+    <ProjectReference Include="..\Gibbed.Borderlands2.ProtoBufFormats\Gibbed.Borderlands2.ProtoBufFormats.csproj" />
+    <ProjectReference Include="..\Gibbed.IO\Gibbed.IO.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Handsome Jack.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Resources\assaultrifle.png" />
+    <Resource Include="Resources\backpack.png" />
+    <Resource Include="Resources\bank.png" />
+    <Resource Include="Resources\credits cropped.png" />
+    <Resource Include="Resources\credits.png" />
+    <Resource Include="Resources\eridium.png" />
+    <Resource Include="Resources\exclamation mark.png" />
+    <Resource Include="Resources\fast travel.png" />
+    <Resource Include="Resources\fugue\computer.png" />
+    <Resource Include="Resources\fugue\control-090.png" />
+    <Resource Include="Resources\fugue\control-double-090.png" />
+    <Resource Include="Resources\fugue\disk-rename.png" />
+    <Resource Include="Resources\fugue\disk.png" />
+    <Resource Include="Resources\fugue\document-binary.png" />
+    <Resource Include="Resources\fugue\document-copy.png" />
+    <Resource Include="Resources\fugue\document-delete.png" />
+    <Resource Include="Resources\fugue\document.png" />
+    <Resource Include="Resources\fugue\exclamation.png" />
+    <Resource Include="Resources\fugue\folder-open-document.png" />
+    <Resource Include="Resources\fugue\luggage.png" />
+    <Resource Include="Resources\fugue\piggy-bank.png" />
+    <Resource Include="Resources\fugue\printer.png" />
+    <Resource Include="Resources\fugue\scanner.png" />
+    <Resource Include="Resources\fugue\television-image.png" />
+    <Resource Include="Resources\fugue\television-test.png" />
+    <Resource Include="Resources\green vault symbol.png" />
+    <Resource Include="Resources\Handsome Jack.ico" />
+    <Resource Include="Resources\Handsome Jack.png" />
+    <Resource Include="Resources\pink seraph crystal.png" />
+    <Resource Include="Resources\question mark.png" />
+    <Resource Include="Resources\red skull.png" />
+    <Resource Include="Resources\scooter.png" />
+    <Resource Include="Resources\seraph crystal.png" />
+    <Resource Include="Resources\shield.png" />
+    <Resource Include="Resources\stash.png" />
+    <Resource Include="Resources\torgue token.png" />
+    <Resource Include="Resources\wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\AdvancedProperties11.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Categorize16.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\ClearFilter16.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Database11.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Inheritance11.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Local11.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Resource11.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\SortAscending16.png" />
+    <Resource Include="Resources\Xceed.Wpf.Toolkit\PropertyGrid\Images\Style11.png" />
+  </ItemGroup>
+  <Target Name="RemoveBadReferencedAssemblies" AfterTargets="ResolveAssemblyReferences" Condition="'$(Configuration)'!='SaveEdit Packaging'">
+    <ItemGroup>
+      <AssembliesToEmbed Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)'=='.dll'" />
+      <!-- Exclude Xceed's AvalonDock/DataGrid -->
+      <AssembliesToRemove Include="@(AssembliesToEmbed)" Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('%(AssembliesToEmbed.Filename)','^Xceed\.Wpf\.(AvalonDock|DataGrid).*|.*\.resources.*$'))" />
+      <ReferenceCopyLocalPaths Remove="@(AssembliesToRemove)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="EmbedReferencedAssemblies" AfterTargets="ResolveAssemblyReferences" Condition="'$(Configuration)'=='SaveEdit Packaging'">
+    <ItemGroup>
+      <AssembliesToEmbed Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)'=='.dll'" />
+      <!-- Exclude Xceed's AvalonDock/DataGrid -->
+      <AssembliesToRemove Include="@(AssembliesToEmbed)" Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('%(AssembliesToEmbed.Filename)','^Xceed\.Wpf\.(AvalonDock|DataGrid).*|.*\.resources.*$'))" />
+      <AssembliesToEmbed Remove="@(AssembliesToRemove)" />
+      <EmbeddedResource Include="@(AssembliesToEmbed)">
+        <LogicalName>Assemblies\%(AssembliesToEmbed.DestinationSubDirectory)%(AssembliesToEmbed.Filename)%(AssembliesToEmbed.Extension)</LogicalName>
+      </EmbeddedResource>
+      <ReferenceCopyLocalPaths Remove="@(AssembliesToEmbed)" />
+      <ReferenceCopyLocalPaths Remove="@(AssembliesToRemove)" />
+    </ItemGroup>
+  </Target>
+</Project>
