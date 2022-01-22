@@ -55,7 +55,7 @@
                                                    gbx:HyperlinkExtensions.IsExternal="true"><Run Text="gibbed"
                                                                                                   Foreground="{StaticResource Gibbed}" /></Hyperlink><Run Text=" for use with Borderlands 2," />
             <LineBreak />
-            <Run Text="Modfied by " /><Hyperlink NavigateUri="https://github.com/Natsu235"
+            <Run Text="Modified by " /><Hyperlink NavigateUri="https://github.com/Natsu235"
                                                  gbx:HyperlinkExtensions.IsExternal="true"><Run Text="PhantomNatsu" /></Hyperlink><Run Text=" to work with Tiny Tina's Assault on Dragon Keep." />
             <LineBreak />
         </TextBlock>

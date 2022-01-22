@@ -244,7 +244,7 @@
                         <xctk:PropertyDefinition TargetProperties="NumChallengePrestiges" />
                         <xctk:PropertyDefinition TargetProperties="LockoutList" />
                         <xctk:PropertyDefinition TargetProperties="FullyExploredAreas" />
-                        <xctk:PropertyDefinition TargetProperties="NumGoldenKeysNotified" />
+                        <xctk:PropertyDefinition TargetProperties="NumSkeletonKeysNotified" />
                         <xctk:PropertyDefinition TargetProperties="LastPlaythroughNumber" />
                         <xctk:PropertyDefinition TargetProperties="ShowNewPlaythroughNotification" />
                         <xctk:PropertyDefinition TargetProperties="ReceivedDefaultWeapon" />

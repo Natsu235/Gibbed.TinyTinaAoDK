@@ -77,7 +77,7 @@ namespace Gibbed.TinyTinaAoDK.ProtoBufFormats.WillowTwoSave
         private int _DLCPlayerClassPackageId;
         private List<string> _FullyExploredAreas = new List<string>();
         private List<GoldenKeys> _Unknown47 = new List<GoldenKeys>();
-        private int _NumGoldenKeysNotified;
+        private int _NumSkeletonKeysNotified;
         private int _LastPlaythroughNumber;
         private bool _ShowNewPlaythroughNotification;
         private bool _ReceivedDefaultWeapon;
@@ -983,15 +983,15 @@ namespace Gibbed.TinyTinaAoDK.ProtoBufFormats.WillowTwoSave
         }
 
         [ProtoMember(48, IsRequired = true)]
-        public int NumGoldenKeysNotified
+        public int NumSkeletonKeysNotified
         {
-            get { return this._NumGoldenKeysNotified; }
+            get { return this._NumSkeletonKeysNotified; }
             set
             {
-                if (value != this._NumGoldenKeysNotified)
+                if (value != this._NumSkeletonKeysNotified)
                 {
-                    this._NumGoldenKeysNotified = value;
-                    this.NotifyOfPropertyChange(nameof(NumGoldenKeysNotified));
+                    this._NumSkeletonKeysNotified = value;
+                    this.NotifyOfPropertyChange(nameof(NumSkeletonKeysNotified));
                 }
             }
         }
