@@ -6,6 +6,8 @@ Tools for modding Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adv
 
 **Consider supporting him on [Patreon](https://patreon.com/gibbed), [Ko-fi](https://ko-fi.com/gibbed), [PayPal](https://paypal.me/gibbed), or by using the Epic Support-A-Creator Tag "GIBBED".**
 
+[![Build status](https://ci.appveyor.com/api/projects/status/uvdl5ky2mr7xa9ms/branch/main?svg=true)](https://ci.appveyor.com/project/Natsu235/gibbed-tinytinaaodk/branch/main)
+
 ## Save Editor
 
 To download, [go to the current release](https://github.com/Natsu235/Gibbed.TinyTinaAoDK/releases/latest) and download `aodk_saveedit_1.0.x.zip`.
