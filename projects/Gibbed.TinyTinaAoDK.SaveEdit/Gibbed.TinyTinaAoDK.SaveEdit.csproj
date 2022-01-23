@@ -84,9 +84,10 @@
     <Resource Include="Resources\scooter.png" />
     <Resource Include="Resources\seraph crystal.png" />
     <Resource Include="Resources\shield.png" />
+    <Resource Include="Resources\small wonderlands symbol.png" />
     <Resource Include="Resources\stash.png" />
     <Resource Include="Resources\Tiny Tina.ico" />
-    <Resource Include="Resources\Tiny Tina.jpg" />
+    <Resource Include="Resources\Tiny Tina.png" />
     <Resource Include="Resources\torgue token.png" />
     <Resource Include="Resources\wheel.png" />
   </ItemGroup>

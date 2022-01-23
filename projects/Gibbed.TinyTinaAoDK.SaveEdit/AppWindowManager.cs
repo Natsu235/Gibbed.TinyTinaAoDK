@@ -34,7 +34,7 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
         private const string _WindowTitle = "Gibbed's Tiny Tina's Assault on Dragon Keep Save Editor";
         private const double _WindowWidth = 800.0 + 95.0;
         private const double _WindowHeight = 560.0;
-        private const string _WindowIconPath = "pack://application:,,,/Resources/Tiny Tina.jpg";
+        private const string _WindowIconPath = "pack://application:,,,/Resources/Tiny Tina.png";
 
         protected override Window EnsureWindow(object model, object view, bool isDialog)
         {
