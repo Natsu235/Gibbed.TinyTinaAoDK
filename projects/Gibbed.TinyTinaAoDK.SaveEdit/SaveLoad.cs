@@ -67,7 +67,11 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             var ofr = new MyOpenFileResult()
                 .FilterFiles(
                     ffc => ffc.AddFilter("sav", this._FilterIndex == 1)
-                              .WithDescription("PC Save Files"))
+                              .WithDescription("PC Save Files")
+                              .AddFilter("sav", this._FilterIndex == 2)
+                              .WithDescription("Xbox 360 Save Files")
+                              .AddFilter("sav", this._FilterIndex == 3)
+                              .WithDescription("PlayStation 3 Save Files"))
                 .WithFileDo(s => fileName = s)
                 .WithFilterIndexDo(i => filterIndex = i);
 
@@ -90,10 +94,12 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             {
                 Platform.Invalid,
                 Platform.PC,
+                Platform.X360,
+                Platform.PS3,
             };
 
             fileNameAction(fileName);
-            platformAction(filterIndex < 1 || filterIndex > 1
+            platformAction(filterIndex < 1 || filterIndex > 3
                                ? Platform.PC
                                : platforms[filterIndex]);
         }

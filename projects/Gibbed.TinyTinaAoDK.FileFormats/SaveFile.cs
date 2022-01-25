@@ -88,7 +88,9 @@ namespace Gibbed.TinyTinaAoDK.FileFormats
 
         private static bool IsSupportedPlatform(Platform platform)
         {
-            return platform == Platform.PC;
+            return platform == Platform.PC ||
+                   platform == Platform.X360 ||
+                   platform == Platform.PS3;
         }
 
         public void Serialize(Stream output)

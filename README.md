@@ -2,7 +2,7 @@
 
 Tools for modding Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure.
 
-**Originally made by Gibbed for Borderlands 2**
+**Originally made by [Gibbed](https://github.com/gibbed) for Borderlands 2**
 
 **Consider supporting him on [Patreon](https://patreon.com/gibbed), [Ko-fi](https://ko-fi.com/gibbed), [PayPal](https://paypal.me/gibbed), or by using the Epic Support-A-Creator Tag "GIBBED".**
 
