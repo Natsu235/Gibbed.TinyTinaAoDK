@@ -118,6 +118,8 @@ namespace Gibbed.TinyTinaAoDK.SaveEdit
             this.Platforms = new ObservableCollection<PlatformDisplay>
             {
                 new PlatformDisplay("PC", Platform.PC),
+                new PlatformDisplay("Xbox 360", Platform.X360),
+                new PlatformDisplay("PlayStation 3", Platform.PS3),
             };
         }
 
