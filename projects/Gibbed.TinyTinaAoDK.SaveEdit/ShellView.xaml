@@ -139,7 +139,6 @@
                                     IsEnabled="{Binding Path=SaveFile, Converter={StaticResource NullToBooleanConverter1}, ConverterParameter=true}" />
                 </ScrollViewer>
             </TabItem>
-            <!--
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -155,7 +154,6 @@
                                     IsEnabled="{Binding Path=SaveFile, Converter={StaticResource NullToBooleanConverter1}, ConverterParameter=true}" />
                 </ScrollViewer>
             </TabItem>
-            -->
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
