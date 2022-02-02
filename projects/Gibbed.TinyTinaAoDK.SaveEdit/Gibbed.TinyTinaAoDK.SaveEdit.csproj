@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net40</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>Gibbed's Tiny Tina's Assault on Dragon Keep Save Editor</AssemblyTitle>
     <Company>Gibbed</Company>
     <Authors>Gibbed</Authors>
