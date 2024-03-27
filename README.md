@@ -1,6 +1,7 @@
 # Gibbed's Tiny Tina's Assault on Dragon Keep Tools
 
-Tools for modding Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure.
+Tools for modding **Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure**<br/>
+(Standalone version of the **Tiny Tina's Assault on Dragon Keep** DLC for Borderlands 2)
 
 **Originally made by [Gibbed](https://github.com/gibbed) for Borderlands 2**
 
